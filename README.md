@@ -1,6 +1,6 @@
 # TR
 
-Bu tek bir seçim için oluşturulmuş basit bir uygulamadır. Bahsi geçen seçim Cumhurbaşkanlığı 2.Tur Seçimi'dir. Uygulama Xamarin Forms kullanılarak oluşturulmuştur.
+Bu tek bir seçim için oluşturulmuş basit bir uygulamadır. Bahsi geçen seçim 2023 Cumhurbaşkanlığı 2.Tur Seçimi'dir. Uygulama Xamarin Forms kullanılarak oluşturulmuştur.
 
 # EN
 
