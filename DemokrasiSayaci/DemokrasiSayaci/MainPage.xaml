@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemokrasiSayaci.MainPage">
+
+    <StackLayout Orientation="Vertical">
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <ImageButton x:Name="btnClearData" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"  Clicked="btnClearData_Clicked" Source="button_delete" Aspect="AspectFill" HeightRequest="20"/>
+            <Label x:Name="lblSANDIK" Text="SANDIK:" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" MaxLines="1"/>
+            <Label x:Name="lblCrateName" Text="-" VerticalOptions="Center" HorizontalOptions="Center" FontSize="12" MaxLines="1" LineBreakMode="MiddleTruncation"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Orientation="Vertical" Spacing="0">
+                <Label x:Name="rteCounter" Text="-" TextColor="White" HorizontalOptions="Center" FontSize="65" FontAttributes="Bold,Italic"/>
+                <ImageButton x:Name="buttonRTE" Aspect="AspectFill" Source="rte_paper" HeightRequest="450" WidthRequest="190" BackgroundColor="Transparent" Clicked="buttonRTE_Clicked"/>
+                <ImageButton x:Name="buttonRTEDecrease" Aspect="AspectFill" Source="rte_decrease" WidthRequest="193" BackgroundColor="Transparent" Clicked="buttonRTEDecrease_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Spacing="0">
+                <Label x:Name="kkCounter" Text="-" TextColor="White" HorizontalOptions="Center" FontSize="65" FontAttributes="Bold,Italic"/>
+                <ImageButton x:Name="buttonKK" Source="kk_paper" Aspect="AspectFill" HeightRequest="450" WidthRequest="190" BackgroundColor="Transparent" Clicked="buttonKK_Clicked"/>
+                <ImageButton x:Name="buttonKKDecrease" Aspect="AspectFill" Source="kk_decrease"  WidthRequest="193" BackgroundColor="Transparent" Clicked="buttonKKDecrease_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+
+
+
+    </StackLayout>
+
+</ContentPage>
