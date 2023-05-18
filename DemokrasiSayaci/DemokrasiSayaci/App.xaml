@@ -4,5 +4,9 @@
              x:Class="DemokrasiSayaci.App">
     <Application.Resources>
 
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor" Value="#eeecf6" />
+        </Style>
+
     </Application.Resources>
 </Application>

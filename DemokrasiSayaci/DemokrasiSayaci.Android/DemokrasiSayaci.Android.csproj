@@ -92,7 +92,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\button_vibrate.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DemokrasiSayaci\DemokrasiSayaci.csproj">
       <Project>{BF65C197-5FF4-40D2-A06D-76FE27DEC473}</Project>
