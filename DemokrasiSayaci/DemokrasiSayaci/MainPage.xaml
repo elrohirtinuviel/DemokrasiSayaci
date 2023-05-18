@@ -33,12 +33,12 @@
            
 
         </StackLayout>
-        <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" Spacing="0">
             <Label Text="GEÇERSİZ OY" FontSize="20" HorizontalOptions="Center"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
                     <Button x:Name="btnInvalidVoteDecrease" WidthRequest="50" BackgroundColor="#444444" TextColor="White" Text="-" FontSize="20"  HorizontalOptions="Center" Clicked="btnInvalidVoteDecrease_Clicked"  CornerRadius="90"/>
-                    <Label x:Name="lblInvalidVotes" TextColor="Red" Text="0" FontSize="20" VerticalOptions="Center"/>
+                    <Label x:Name="lblInvalidVotes" TextColor="Red" Text="0" FontSize="30" VerticalOptions="Center"/>
                     <Button x:Name="btnInvalidVoteIncrease" WidthRequest="50" BackgroundColor="#444444" TextColor="White" Text="+" FontSize="20"  HorizontalOptions="Center" Clicked="btnInvalidVoteIncrease_Clicked" CornerRadius="90"/>
                 </StackLayout>
             </StackLayout>
