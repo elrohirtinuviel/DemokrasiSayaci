@@ -11,10 +11,10 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
 
                 <ImageButton x:Name="btnClearData"   HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"  Clicked="btnClearData_Clicked" Source="button_delete" Aspect="AspectFill" HeightRequest="30" WidthRequest="25"/>
-                <Label x:Name="lblCrateName" Text="-------------" VerticalOptions="Center" HorizontalOptions="Center" FontSize="12" MaxLines="1" LineBreakMode="MiddleTruncation"/>
+                <Label x:Name="lblCrateName" Text="-------------" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" FontSize="12" MaxLines="1" LineBreakMode="MiddleTruncation"/>
                 <ImageButton x:Name="btnVibrate" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"  Clicked="btnVibrate_Clicked"  Source="button_vibrate" Aspect="AspectFill" HeightRequest="30"/>
             </StackLayout>
-            <Label Text="KALAN OY" FontSize="10" HorizontalOptions="Center"/>
+            <Label Text="KALAN OY" TextColor="White" FontSize="10" HorizontalOptions="Center"/>
             <Label x:Name="lblVotesLeft" TextColor="White" FontSize="20" Text="0" HorizontalOptions="Center" VerticalOptions="Center" MaxLines="1"/>
         </StackLayout>
         
@@ -34,7 +34,7 @@
 
         </StackLayout>
         <StackLayout Orientation="Vertical" HorizontalOptions="Center" Spacing="0">
-            <Label Text="GEÇERSİZ OY" FontSize="20" HorizontalOptions="Center"/>
+            <Label Text="GEÇERSİZ OY" TextColor="White" FontSize="20" HorizontalOptions="Center"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
                     <Button x:Name="btnInvalidVoteDecrease" WidthRequest="50" BackgroundColor="#444444" TextColor="White" Text="-" FontSize="20"  HorizontalOptions="Center" Clicked="btnInvalidVoteDecrease_Clicked"  CornerRadius="90"/>
