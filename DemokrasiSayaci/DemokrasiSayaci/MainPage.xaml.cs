@@ -13,13 +13,17 @@ namespace DemokrasiSayaci
     {
         public MainPage()
         {
-            InitializeComponent();           
-            crateName = Preferences.Get("crateName", "-");
+            InitializeComponent();
+            SetValues();
             if (crateName == "-" || crateName == null || crateName == "")
             {
                 SetCrateName();
             }
-            SetValues();
+            else if(currentVote == 0 && (rteCount == 0 || kkCount == 0))
+            {
+                SetTotalVote();
+            }           
+
         }
 
         public async void SetCrateName()
@@ -44,7 +48,11 @@ namespace DemokrasiSayaci
                 }
                 lblCrateName.Text = newText;
             }
-            SetTotalVote();
+            else
+            {
+                SetTotalVote();
+            }
+            
         }
 
         public async void SetTotalVote()
@@ -61,31 +69,21 @@ namespace DemokrasiSayaci
             {
                 SetTotalVote();
             }
-            Preferences.Set("crateName", crateName);
-            lblCrateName.Text = crateName;
-            if (lblCrateName.Text == "-" || lblCrateName.Text == "")
+            if (lblVotesLeft.Text == "0" || lblVotesLeft.Text == "")
             {
-                SetCrateName();
+                SetTotalVote();
             }
-            else if (lblCrateName.Text == null)
+            else if (lblVotesLeft.Text == null)
             {
                 System.Diagnostics.Process.GetCurrentProcess().Kill();
             }
-            else if (lblCrateName.Text.Length >= 49)
-            {
-                string newText = "";
-                for (int i = 0; i < 49; i++)
-                {
-                    newText += lblCrateName.Text[i];
-                }
-                lblCrateName.Text = newText;
-            }
+            
 
-            //SetValues();
         }
 
         public void SetValues()
         {
+            crateName = Preferences.Get("crateName", "");
             rteCount = Convert.ToInt32(Preferences.Get("rteCount", "0"));
             kkCount = Convert.ToInt32(Preferences.Get("kkCount", "0"));
             vibrate = Convert.ToBoolean(Preferences.Get("vibrate", "true"));
@@ -257,7 +255,7 @@ namespace DemokrasiSayaci
                 Preferences.Set("rteCount", "0");
                 Preferences.Set("kkCount", "0");
                 Preferences.Set("totalVotes", "0");
-                Preferences.Set("currentVotes", "0");
+                Preferences.Set("currentVote", "0");
                 Preferences.Set("invalidVotes", "0");
                 rteCount = Convert.ToInt32(Preferences.Get("rteCount", "0"));
                 kkCount = Convert.ToInt32(Preferences.Get("kkCount", "0"));
@@ -265,6 +263,7 @@ namespace DemokrasiSayaci
                 lblVotesLeft.Text = "0";
                 lblInvalidVotes.Text = "0";
                 crateName = "";
+                currentVote = 0;
                 rteCounter.Text = rteCount.ToString();
                 kkCounter.Text = kkCount.ToString();
                 SetValues();
